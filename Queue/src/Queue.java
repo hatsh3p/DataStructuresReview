@@ -1,4 +1,3 @@
-import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -32,7 +31,7 @@ public class Queue {
 
     public void enqueue(String data) {
         if (this.hasSpace()) {
-            this.queue.addFirst(data);
+            this.queue.addLast(data);
             this.size++;
         } else {
             throw new Error("Queue is full!");

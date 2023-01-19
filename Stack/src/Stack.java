@@ -1,4 +1,6 @@
+import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Stack {
     LinkedList stack;
@@ -31,5 +33,30 @@ public class Stack {
         } else {
             throw new Error("Stack is full!");
         }
+    }
+
+    public String pop() {
+        if (!this.isEmpty()) {
+            this.size--;
+            return this.stack.removeFirst().toString();
+        } else {
+            throw new Error("Stack is empty!");
+        }
+    }
+
+    public String peek() {
+        if (!this.isEmpty()) {
+            return this.stack.peek().toString();
+        } else {
+            return null;
+        }
+    }
+
+    public void printList() {
+        System.out.print("<top> ");
+        List items = this.stack;
+        System.out.print(items.toString());
+        System.out.print(" <bottom>\n");
+
     }
 }
