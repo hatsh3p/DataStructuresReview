@@ -30,6 +30,9 @@ public class Main {
         bartTransit.removeEdge(berryessaStation, oakland19thStation);
 
         bartTransit.print();
-
+        System.out.println("======Depth First Traversal======");
+        GraphTraverser.depthFirstTraversal(oakland19thStation);
+        System.out.println("======Breadth First Traversal======");
+        GraphTraverser.breadthFirstTraversal(oakland19thStation);
     }
 }
